@@ -117,10 +117,10 @@ def sample_sequence_by_interpolation(sequence, target_length=60):
 st.title("Hệ Thống Nhận Diện Ngôn Ngữ Ký Hiệu")
 
 st.sidebar.header("Cấu Hình Đường Dẫn")
-MODEL_PATH = st.sidebar.text_input("Keras Model Path", r'D:\sign_language_project\vsl_bilstm_model.h5')
+MODEL_PATH = st.sidebar.text_input("Keras Model Path", r'D:\VSL\trainned_model\vsl_bilstm_model.h5')
 TRAIN_DIR = st.sidebar.text_input("Dataset Folder (Labels)", r'D:\sign_language_project\hand-sign-recognition\data\Processed')
-POSE_MODEL_PATH = st.sidebar.text_input("Pose Task Path", r'D:\sign_language_project\hand-sign-recognition\notebooks\models\pose_landmarker.task')
-HAND_MODEL_PATH = st.sidebar.text_input("Hand Task Path", r'D:\sign_language_project\hand-sign-recognition\notebooks\models\hand_landmarker.task')
+POSE_MODEL_PATH = st.sidebar.text_input("Pose Task Path", r'D:\VSL\model\pose_landmarker.task')
+HAND_MODEL_PATH = st.sidebar.text_input("Hand Task Path", r'D:\VSL\model\hand_landmarker.task')
 
 LABELS = load_labels_from_folders(TRAIN_DIR)
 bilstm_model = load_bilstm_model(MODEL_PATH)
